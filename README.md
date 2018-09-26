@@ -16,6 +16,8 @@ In addition, this project will include:
 
 This app will consist of a single screen with game board, game controls, and navigation links to the Github and my LinkedIn. Game controls will include Start and Reset buttons.
 
+![](https://raw.githubusercontent.com/kevinchen93/memery/master/memery-wireframe.png)
+
 ## Architecture and Technologies
 
 ## Implementation Timeline
