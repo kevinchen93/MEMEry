@@ -7,16 +7,44 @@ body {
 .game-title {
   color: white;
   font-size: 28px;
+  margin-bottom: 7px;
 }
 
 .game-container {
+  width: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.buttons-container {
+  margin-right: 45px;
+}
+
+.game-container button {
+  width: 100%;
+  display: block;
+  margin-top: 45px;
+  padding: 9px;
+  font-size: 22px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.game-container button:active {
+  background: #ff3850;
+  color: white;
+  outline: none;
+}
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   height: 700px;
   width: 800px;
   padding: 18px;
-  margin: auto;
   border: 2px solid #ff3850;
   border-radius: 6px;
   background-color: white;
@@ -44,6 +72,7 @@ body {
 
 .card__face--front {
   background: #ff3850;
+  border-radius: 3px;
 }
 
 .card__face--back {
