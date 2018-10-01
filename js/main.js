@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   modalButton.addEventListener('click', () => {
     const cardContainer = document.getElementsByClassName('card-container')[0];
-    while(cardContainer.firstChild){
+    while(cardContainer.firstChild) {
         cardContainer.removeChild(cardContainer.firstChild);
     }
 
@@ -213,5 +213,15 @@ document.addEventListener("DOMContentLoaded", () => {
     moves = 0;
     let temp500 = document.getElementsByClassName('moves')[0];
     temp500.firstChild.nodeValue = moves;
+  });
+
+  const modalPopup = document.getElementsByClassName('modal')[0];
+  const closeButton = document.getElementsByClassName('close')[0];
+  closeButton.addEventListener('click', () => {
+    modalPopup.style.display = 'none';
+  });
+
+  window.addEventListener('click', () => {
+    modalPopup.style.display = 'none';
   });
 });
