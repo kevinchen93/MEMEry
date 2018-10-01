@@ -4,70 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/memery.ico"/>
     <title>Memery</title>
   </head>
-<!-- TODO: make background nyan cat -->
   <body>
+  <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="modal-text"></p>
+    <button class="modal-button">Do better!</button>
+  </div>
+  </div>
     <div class="main-content">
       <div class="game-title">Memery</div>
       <div class="game-container">
-        <div class="buttons-container">
-          <button class="start-button" type="button" name="button">Start</button>
-          <button class="reset-button" type="button" name="button">New Game</button>
+         <div class="buttons-container">
+          <button class="new-game-button" type="button" name="button">New Game</button>
         </div>
         <div class="card-container">
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-          <div class="card-content">
-            <div class="card__face card__face--front"></div>
-            <div class="card__face card__face--back"></div>
-          </div>
-
-          </div>
         </div>
-
+        <div class="buttons-container">
+          <div class="scoreboard-info">
+            <div>Game duration:
+              <span class="time">0</span>sec
+            </div>
+            <div>Moves:
+              <span class="moves">0</span>
+            </div>
+          </div>
+          <a href="https://github.com/kevinchen93" target="_blank">
+         <button class="start-button" type="button" name="button">GitHub</button>
+          </a>
+          <a href="https://www.linkedin.com/in/kaychen93/" target="_blank">
+         <button class="start-button" type="button" name="button">LinkedIn</button>
+          </a>
+          <a href="https://kevinnn.co/" target="_blank">
+         <button class="start-button" type="button" name="button">Portfolio</button>
+          </a>
+       </div>
       </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>

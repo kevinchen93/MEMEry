@@ -1,24 +1,19 @@
 # Memery
 
-## Background
+Memery is a game inspired by the classic card game Memory. It was built using pure vanilla JavaScript!
 
-Memery is a classic memory card game in which all the cards are placed face down. The game is played out on a rectangular grid. The values of the cards will be internet memes. The player wins the game when all pairs of cards have been found. Until then, the locations of non-matching pairs of cards will be revealed face-up and then turned face-down. The number of moves will be kept track of.
+![](assets/images/memery.png)
 
-## Functionality & MVP
+## Gameplay
 
-Users will be able to:
-- [ ] Start or reset the game
+Memery is a card game in which all the cards are placed face down. The values of the cards will be some of your familiar internet memes. The player wins the game when all pairs of cards have been found. Until then, the locations of non-matching pairs of cards will be revealed face-up and then turned face-down.
 
-In addition, this project will include:
-- [ ] A production README
+How good is your memery?
 
-## Wireframes
+## Look and feel
 
-This app will consist of a single screen with game board, game controls, and navigation links to the Github and my LinkedIn. Game controls will include Start and Reset buttons.
+The simple color scheme was chosen to distract the player as little as possible. The internet memes combined with the simple UI provides the user an enjoyable experience!
 
-![](https://raw.githubusercontent.com/kevinchen93/memery/master/memery-wireframe.png)
+## Future Plans
 
-## Architecture and Technologies
-
-## Implementation Timeline
-**Day 1:** Set up necessary Node modules, webpack, etc.
+More memes, more cards, and ability for users to pick their own memes. Maybe chillstep music as well.
