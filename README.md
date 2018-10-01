@@ -10,7 +10,7 @@ Memery is a card game in which all the cards are placed face down. The values of
 
 How good is your memery?
 
-## Look and feel
+## Look and Feel
 
 The simple color scheme was chosen to distract the player as little as possible. The internet memes also provide the user an enjoyable experience!
 
