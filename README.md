@@ -1,6 +1,6 @@
 # Memery
 
-Memery is a game inspired by the classic card game Memory. It was built using only vanilla JavaScript!
+Memery is a game inspired by the classic card game Memory. It was built using vanilla JavaScript!
 
 ![](assets/images/memery.png)
 
