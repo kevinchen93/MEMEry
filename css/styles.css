@@ -84,7 +84,7 @@ a {
 
   perspective: 600px;
   position: relative;
-  transition: transform 1s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;
 }
 
@@ -139,17 +139,17 @@ a {
 }
 
 .close {
-    color: #ff3850;
-    float: right;
-    font-size: 40px;
-    font-weight: bold;
+  color: #ff3850;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #ff3850;
-    text-decoration: none;
-    cursor: pointer;
+  color: #ff3850;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-content > button {
