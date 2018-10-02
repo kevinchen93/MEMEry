@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .main-content {
 }
 
