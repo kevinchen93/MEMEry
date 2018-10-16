@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
       }
-    }, 500);
+    }, 900);
   });
 
   const newGameButton = document.getElementsByClassName('new-game-button')[0];

@@ -24,13 +24,12 @@ button:hover {
 .game-container {
   width: 1400px;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: auto;
 }
 
 .scoreboard-info {
-  margin-bottom: 400px;
+  margin-bottom: 375px;
   padding: 7px 17px;
   font-size: 22px;
   border-radius: 7px;
@@ -48,18 +47,24 @@ button:hover {
 .buttons-container {
   width: 400px;
   text-align: -webkit-center;
-  margin-right: 45px;
   margin-left: 45px;
+}
+
+.buttons-container h1 {
+  color: white;
 }
 
 .game-container button {
   width: 200px;
   display: block;
-  margin-top: 45px;
   padding: 9px;
   font-size: 22px;
   border-radius: 6px;
   outline: none;
+}
+
+.links-container button {
+  margin-top: 25px;
 }
 
 .game-container button:active, .modal-content > button:active {
@@ -88,7 +93,7 @@ button:hover {
 
   perspective: 600px;
   position: relative;
-  transition: transform 0.7s;
+  transition: transform 0.9s;
   transform-style: preserve-3d;
 }
 
