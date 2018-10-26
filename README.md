@@ -1,8 +1,6 @@
 # Memery
 
-[Live!](https://kevinnn.co/memery/)
-
-Memery is a game inspired by the classic card game Memory. It was built using vanilla JavaScript!
+Memery is a game inspired by the classic card game Memory. It was built using vanilla JavaScript! <a href="http://kevinnn.co/memery/" target="_blank">Play Memery here!</a>
 
 ![](assets/images/memery.png)
 
