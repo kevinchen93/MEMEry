@@ -2,6 +2,7 @@ body {
   background-color: black;
   font-family: Arial;
   text-align: center;
+  background-image: url('https://thebitcoinpub-91d3.kxcdn.com/uploads/default/original/2X/3/32a6d325b043b106b6eb05ad15fde357741e9b0f.jpg');
 }
 
 a {
@@ -51,7 +52,7 @@ button:hover {
 }
 
 .buttons-container h1 {
-  color: white;
+  color: blue;
 }
 
 .game-container button {
