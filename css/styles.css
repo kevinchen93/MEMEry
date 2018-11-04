@@ -52,7 +52,8 @@ button:hover {
 }
 
 .buttons-container h1 {
-  color: blue;
+  color: #00dcf6;
+  font-weight: 400;
 }
 
 .game-container button {
@@ -62,10 +63,39 @@ button:hover {
   font-size: 22px;
   border-radius: 6px;
   outline: none;
+
+}
+
+.new-game-button {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.new-game-button:hover {
+  border: 2px;
+  background: #ff3850;
+  color: white;
+  transform: scale(0.9);
+}
+
+.game-container button:active {
+  background: #ff3850;
+  color: white;
 }
 
 .links-container button {
   margin-top: 25px;
+
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.links-container button:hover {
+  background: #ff3850;
+  color: white;
+  outline: none;
 }
 
 .game-container button:active, .modal-content > button:active {
