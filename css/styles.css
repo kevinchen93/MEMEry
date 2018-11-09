@@ -119,7 +119,8 @@ button:hover {
 }
 
 .card-content {
-  height: 30%;
+  margin-bottom: 7px;
+  height: 32%;
   width: 23%;
   border: 3px solid lightgray;
   border-radius: 6px;
