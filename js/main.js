@@ -157,8 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const newGameButton = document.getElementsByClassName('new-game-button')[0];
   const modalButton = document.getElementsByClassName('modal-button')[0];
+  let myAudio = new Audio();
 
   newGameButton.addEventListener('click', () => {
+    myAudio.src = 'assets/sounds/nujabes.mp3';
+    myAudio.play();
+
     const cardContainer = document.getElementsByClassName('card-container')[0];
     while(cardContainer.firstChild){
         cardContainer.removeChild(cardContainer.firstChild);
