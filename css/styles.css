@@ -22,15 +22,20 @@ button:hover {
   margin-bottom: 7px;
 }
 
+.author {
+  margin: 0 0 7px 0;
+  color: white;
+}
+
 .game-container {
   width: 1400px;
   display: flex;
-  justify-content: center;
   margin: auto;
+  justify-content: center;
 }
 
 .scoreboard-info {
-  margin-bottom: 375px;
+  margin-bottom: 420px;
   padding: 7px 17px;
   font-size: 22px;
   border-radius: 7px;
@@ -63,7 +68,6 @@ button:hover {
   font-size: 22px;
   border-radius: 6px;
   outline: none;
-
 }
 
 .new-game-button,
@@ -107,13 +111,13 @@ button:hover {
 }
 
 .card-container {
+  height: 700px;
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 700px;
-  width: 800px;
   padding: 18px;
-  border: 2px solid #ff3850;
+  /* border: 2px solid #ff3850; */
   border-radius: 6px;
   background-color: white;
 }
@@ -122,7 +126,7 @@ button:hover {
   margin-bottom: 7px;
   height: 32%;
   width: 23%;
-  border: 3px solid lightgray;
+  /* border: 3px solid lightgray; */
   border-radius: 6px;
 
   perspective: 600px;

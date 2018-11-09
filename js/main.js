@@ -87,8 +87,13 @@ function checkMatch() {
   const secondURL = flippedCardsArray[1].querySelectorAll('div.card__face--back')[0].style.backgroundImage;
 
   if (firstURL === secondURL) {
-    flippedCardsArray[0].querySelectorAll('div.card__face--front')[0].style.background = 'black';
-    flippedCardsArray[1].querySelectorAll('div.card__face--front')[0].style.background = 'black';
+
+    flippedCardsArray[0].querySelectorAll('div.card__face--front')[0].style.background = firstURL;
+    flippedCardsArray[0].querySelectorAll('div.card__face--front')[0].style.backgroundSize = '100% 100%';
+
+    flippedCardsArray[1].querySelectorAll('div.card__face--front')[0].style.background = firstURL;
+    flippedCardsArray[1].querySelectorAll('div.card__face--front')[0].style.backgroundSize = '100% 100%';
+
     return true;
   } else {
     return false;
