@@ -94,6 +94,12 @@ function checkMatch() {
     flippedCardsArray[1].querySelectorAll('div.card__face--front')[0].style.background = firstURL;
     flippedCardsArray[1].querySelectorAll('div.card__face--front')[0].style.backgroundSize = '100% 100%';
 
+    flippedCardsArray.forEach( flippedCard => {
+      flippedCard.classList.add('matched');
+      flippedCard.classList.remove('is-flipped');
+      flippedCard.removeEventListener('click', toggleFlipHandler);
+    });
+
     return true;
   } else {
     return false;
@@ -165,12 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let myAudio = new Audio();
 
   newGameButton.addEventListener('click', () => {
-    myAudio.src = 'assets/sounds/nujabes.mp3';
+    myAudio.src = 'assets/sounds/Nujabes - Luv(sic) Pt. 3 (ft. Shing02).mp3';
     myAudio.play();
 
     const cardContainer = document.getElementsByClassName('card-container')[0];
     while(cardContainer.firstChild){
-        cardContainer.removeChild(cardContainer.firstChild);
+      cardContainer.removeChild(cardContainer.firstChild);
     }
 
     renderCards();
@@ -197,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modalButton.addEventListener('click', () => {
     const cardContainer = document.getElementsByClassName('card-container')[0];
     while(cardContainer.firstChild) {
-        cardContainer.removeChild(cardContainer.firstChild);
+      cardContainer.removeChild(cardContainer.firstChild);
     }
 
     const modalPopup = document.getElementsByClassName('modal')[0];
