@@ -7,7 +7,6 @@ let stopwatch = {
     sec = 0;
     count = setInterval(function() {
       sec++;
-
       stopwatch.update(sec);
     }, 1000);
   },
@@ -35,41 +34,42 @@ function shuffle(array) {
 
 function renderCards() {
   let cardsURLArray = [
-    {
-      imageURL:'https://i.redd.it/y22lkf2ji9j11.jpg'
-    },
-    {
-      imageURL: 'https://i.redd.it/s88hijpgc4r01.jpg'
-    },
-    {
-      imageURL: 'https://i.imgur.com/JpUnMZJ.jpg'
-    },
-    {
-      imageURL: 'https://i.imgur.com/mk12hAk.jpg'
-    },
-    {
-      imageURL: 'https://i.redd.it/uj9zdnu1vt801.jpg'
-    },
-    {
-      imageURL: 'https://i.redd.it/4lhmxjtj6yp01.jpg'
-    },
+    { imageURL:'https://i.redd.it/y22lkf2ji9j11.jpg' },
+    { imageURL: 'https://i.redd.it/s88hijpgc4r01.jpg' },
+    { imageURL: 'https://i.imgur.com/JpUnMZJ.jpg' },
+    { imageURL: 'https://i.imgur.com/mk12hAk.jpg' },
+    { imageURL: 'https://i.redd.it/uj9zdnu1vt801.jpg' },
+    { imageURL: 'https://i.redd.it/4lhmxjtj6yp01.jpg' },
   ];
+
+  function resetTime() {
+    if (timerStarted) {
+      stopwatch.stop();
+      stopwatch.start();
+      timerStarted = true;
+    } else {
+      stopwatch.start();
+      timerStarted = true;
+    }
+  }
 
   const cardsURLArrayCopy = cardsURLArray.slice();
   cardsURLArray = cardsURLArray.concat(cardsURLArrayCopy);
-
   cardsURLArray = shuffle(cardsURLArray);
 
   const cardContainer = document.getElementsByClassName('card-container')[0];
 
   cardsURLArray.forEach( item => {
     const card = document.createElement('div');
+
     card.classList.add('card-content');
 
     const frontFace = document.createElement('div');
+
     frontFace.classList.add('card__face', 'card__face--front');
 
     const backFace = document.createElement('div');
+
     backFace.classList.add('card__face', 'card__face--back');
     backFace.style.backgroundImage = `url(${item.imageURL})`;
 
@@ -87,7 +87,6 @@ function checkMatch() {
   const secondURL = flippedCardsArray[1].querySelectorAll('div.card__face--back')[0].style.backgroundImage;
 
   if (firstURL === secondURL) {
-
     flippedCardsArray[0].querySelectorAll('div.card__face--front')[0].style.background = firstURL;
     flippedCardsArray[0].querySelectorAll('div.card__face--front')[0].style.backgroundSize = '100% 100%';
 
@@ -180,20 +179,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     renderCards();
+    resetTime();
+
     const cards = document.querySelectorAll('.card-content');
 
     Array.from(cards).forEach( card => {
       card.addEventListener('click', toggleFlipHandler);
     });
-
-    if (timerStarted) {
-      stopwatch.stop();
-      stopwatch.start();
-      timerStarted = true;
-    } else {
-      stopwatch.start();
-      timerStarted = true;
-    }
 
     moves = 0;
     let temp500 = document.getElementsByClassName('moves')[0];
@@ -201,6 +193,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   modalButton.addEventListener('click', () => {
+    renderCards();
+    resetTime();
+
     const cardContainer = document.getElementsByClassName('card-container')[0];
     while(cardContainer.firstChild) {
       cardContainer.removeChild(cardContainer.firstChild);
@@ -209,21 +204,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalPopup = document.getElementsByClassName('modal')[0];
     modalPopup.style.display = 'none';
 
-    renderCards();
     const cards = document.querySelectorAll('.card-content');
 
     Array.from(cards).forEach( card => {
       card.addEventListener('click', toggleFlipHandler);
     });
-
-    if (timerStarted) {
-      stopwatch.stop();
-      stopwatch.start();
-      timerStarted = true;
-    } else {
-      stopwatch.start();
-      timerStarted = true;
-    }
 
     moves = 0;
     let temp500 = document.getElementsByClassName('moves')[0];
