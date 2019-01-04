@@ -42,17 +42,6 @@ function renderCards() {
     { imageURL: 'https://i.redd.it/4lhmxjtj6yp01.jpg' },
   ];
 
-  function resetTime() {
-    if (timerStarted) {
-      stopwatch.stop();
-      stopwatch.start();
-      timerStarted = true;
-    } else {
-      stopwatch.start();
-      timerStarted = true;
-    }
-  }
-
   const cardsURLArrayCopy = cardsURLArray.slice();
   cardsURLArray = cardsURLArray.concat(cardsURLArrayCopy);
   cardsURLArray = shuffle(cardsURLArray);
@@ -77,6 +66,17 @@ function renderCards() {
     card.appendChild(backFace);
     cardContainer.appendChild(card);
   });
+}
+
+function resetTime() {
+  if (timerStarted) {
+    stopwatch.stop();
+    stopwatch.start();
+    timerStarted = true;
+  } else {
+    stopwatch.start();
+    timerStarted = true;
+  }
 }
 
 function checkMatch() {
