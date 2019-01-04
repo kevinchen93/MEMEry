@@ -34,11 +34,11 @@ function shuffle(array) {
 
 function renderCards() {
   let cardsURLArray = [
-    { imageURL:'https://i.redd.it/y22lkf2ji9j11.jpg' },
+    { imageURL:'https://i.redd.it/uku682j1g4y11.jpg' },
     { imageURL: 'https://i.redd.it/s88hijpgc4r01.jpg' },
     { imageURL: 'https://i.imgur.com/JpUnMZJ.jpg' },
     { imageURL: 'https://i.imgur.com/mk12hAk.jpg' },
-    { imageURL: 'https://i.redd.it/uj9zdnu1vt801.jpg' },
+    { imageURL: 'https://i.redd.it/ig5u8ke5qo421.png' },
     { imageURL: 'https://i.redd.it/4lhmxjtj6yp01.jpg' },
   ];
 
