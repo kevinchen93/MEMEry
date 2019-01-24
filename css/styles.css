@@ -1,12 +1,17 @@
 body {
   background-color: black;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   background-image: url('https://thebitcoinpub-91d3.kxcdn.com/uploads/default/original/2X/3/32a6d325b043b106b6eb05ad15fde357741e9b0f.jpg');
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }
 
 button:hover {
@@ -16,15 +21,20 @@ button:hover {
 .main-content {
 }
 
+.game-title, .authoer {
+  font-weight: 500;
+}
+
 .game-title {
   color: white;
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 7px;
 }
 
 .author {
   margin: 0 0 7px 0;
-  color: white;
+  color: #5bc2bf;
+  font-size: 24px;
 }
 
 .game-container {
