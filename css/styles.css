@@ -19,9 +19,45 @@ button:hover {
 }
 
 .main-content {
+  display: none;
 }
 
-.game-title, .authoer {
+.landing-modal {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 2;
+}
+
+.landing-modal p {
+  font-size: 30px;
+  color: white;
+}
+
+.landing-modal button {
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+.landing-game-title {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.landing-author {
+  margin-bottom: 67px;
+}
+
+.landing-game-title,
+.landing-author,
+.game-title,
+.author {
   font-weight: 500;
 }
 
@@ -37,6 +73,16 @@ button:hover {
   font-size: 24px;
 }
 
+.intro {
+  margin-bottom: 77px;
+}
+
+.social-links p,
+.intro p {
+  box-shadow: 0 0 77px 49px rgba(255,231,255,0.25);
+  background: rgba(255,231,255,0.24);
+}
+
 .game-container {
   width: 1400px;
   display: flex;
@@ -45,7 +91,7 @@ button:hover {
 }
 
 .scoreboard-info {
-  margin-bottom: 420px;
+  margin-bottom: 375px;
   padding: 7px 17px;
   font-size: 22px;
   border-radius: 7px;
@@ -67,6 +113,15 @@ button:hover {
   margin-left: 45px;
 }
 
+.buttons-container p {
+  font-weight: 600;
+  color: #ff3850;
+}
+
+.social-links p {
+  font-size: 30px;
+}
+
 .buttons-container h1 {
   color: #00dcf6;
   font-weight: 400;
@@ -81,6 +136,8 @@ button:hover {
   outline: none;
 }
 
+.landing-modal button,
+.links-container button,
 .new-game-button,
 .modal-button {
   -webkit-transition: 0.3s;
@@ -102,12 +159,9 @@ button:hover {
 
 .links-container button {
   margin-top: 25px;
-
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
+.landing-modal button:hover,
 .links-container button:hover,
 .modal-button:hover {
   background: #ff3850;
@@ -115,6 +169,7 @@ button:hover {
   outline: none;
 }
 
+.landing-modal button:active,
 .game-container button:active,
 .modal-content > button:active {
   background: #ff3850;
@@ -123,8 +178,8 @@ button:hover {
 }
 
 .card-container {
-  height: 700px;
-  width: 800px;
+  height: 800px;
+  width: 900px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -136,7 +191,7 @@ button:hover {
 .card-content {
   margin-bottom: 7px;
   height: 32%;
-  width: 23%;
+  width: 24%;
   border-radius: 6px;
   perspective: 600px;
   position: relative;

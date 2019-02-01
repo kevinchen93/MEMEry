@@ -6,10 +6,24 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/images/memery.ico"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <title>memery</title>
   </head>
   <body>
-    <div id="myModal" class="modal">
+    <div class="landing-modal">
+      <h1 class="landing-game-title">MEMEry</h1>
+      <p class="landing-author">by Kevin Chen</p>
+
+      <div class="intro">
+        <p>A test of your memory and memery.</p>
+        <p>Click to flip the cards over and match them as quickly as possible.</p>
+        <p>Also, have fun at some programming humor!</p>
+      </div>
+
+      <button class="landing-modal-button">I'm ready</button>
+    </div>
+
+    <div id="closeModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p class="modal-text"></p>
@@ -18,11 +32,12 @@
     </div>
 
     <div class="main-content">
-      <div class="game-title">Memery</div>
-      <span class="author">by Kevin Chen</span>
+      <!-- <div class="game-title">MEMEry</div>
+      <span class="author">by Kevin Chen</span> -->
       <div class="game-container">
          <div class="buttons-container">
           <button class="new-game-button" type="button" name="button">New Game</button>
+          <p>Press 'm' to mute the music.</p>
         </div>
         <div class="card-container">
         </div>
@@ -36,7 +51,8 @@
             </div>
           </div>
 
-          <div>
+          <div class="social-links">
+            <p>About Kevin Chen</p>
             <div class="links-container">
               <a href="https://github.com/kevinchen93" target="_blank">
                 <button class="start-button" type="button" name="button">GitHub</button>

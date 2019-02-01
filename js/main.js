@@ -23,12 +23,28 @@ function toggleFlipHandler() {
   this.classList.toggle('is-flipped');
 }
 
+function addFlipHandler() {
+  const cards = document.querySelectorAll('.card-content');
+
+  Array.from(cards).forEach( card => {
+    card.addEventListener('click', toggleFlipHandler);
+  });
+}
+
+function removeCards() {
+  const cardContainer = document.getElementsByClassName('card-container')[0];
+  while(cardContainer.firstChild) {
+    cardContainer.removeChild(cardContainer.firstChild);
+  }
+}
+
 // Fisher-Yates shuffle algorithm
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
   }
+
   return array;
 }
 
@@ -123,11 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   timerStarted = true;
 
   const cardDivs = document.querySelectorAll('div.card-container > div');
-  const cards = document.querySelectorAll('.card-content');
-
-  Array.from(cards).forEach( card => {
-    card.addEventListener('click', toggleFlipHandler);
-  });
+  addFlipHandler();
 
   const cardContainer = document.getElementsByClassName('card-container')[0];
 
@@ -167,25 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const newGameButton = document.getElementsByClassName('new-game-button')[0];
   const modalButton = document.getElementsByClassName('modal-button')[0];
-  let myAudio = new Audio();
 
   newGameButton.addEventListener('click', () => {
-    myAudio.src = 'assets/sounds/Nujabes - Luv(sic) Pt. 3 (ft. Shing02).mp3';
-    myAudio.play();
-
-    const cardContainer = document.getElementsByClassName('card-container')[0];
-    while(cardContainer.firstChild){
-      cardContainer.removeChild(cardContainer.firstChild);
-    }
-
+    removeCards();
     renderCards();
     resetTime();
-
-    const cards = document.querySelectorAll('.card-content');
-
-    Array.from(cards).forEach( card => {
-      card.addEventListener('click', toggleFlipHandler);
-    });
+    addFlipHandler();
 
     moves = 0;
     let temp500 = document.getElementsByClassName('moves')[0];
@@ -193,22 +192,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   modalButton.addEventListener('click', () => {
-    renderCards();
     resetTime();
-
-    const cardContainer = document.getElementsByClassName('card-container')[0];
-    while(cardContainer.firstChild) {
-      cardContainer.removeChild(cardContainer.firstChild);
-    }
+    removeCards();
+    renderCards();
 
     const modalPopup = document.getElementsByClassName('modal')[0];
     modalPopup.style.display = 'none';
 
-    const cards = document.querySelectorAll('.card-content');
-
-    Array.from(cards).forEach( card => {
-      card.addEventListener('click', toggleFlipHandler);
-    });
+    addFlipHandler();
 
     moves = 0;
     let temp500 = document.getElementsByClassName('moves')[0];
@@ -217,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const modalPopup = document.getElementsByClassName('modal')[0];
   const closeButton = document.getElementsByClassName('close')[0];
+
   closeButton.addEventListener('click', () => {
     modalPopup.style.display = 'none';
   });
@@ -224,4 +216,33 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('click', () => {
     modalPopup.style.display = 'none';
   });
+});
+
+let audio = new Audio();
+let audioActive = true;
+
+audio.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
+
+$('.landing-modal-button').click(function() {
+  $('.landing-modal').hide();
+  $('.main-content').show();
+  audio.src = 'assets/sounds/Nujabes - Luv(sic) Pt. 3 (ft. Shing02).mp3';
+  audio.volume = 0.7;
+  audio.play();
+  resetTime();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.keyCode === 77) {
+    if (audioActive) {
+      audio.pause();
+      audioActive = false;
+    } else {
+      audio.play();
+      audioActive = true;
+    }
+  }
 });
