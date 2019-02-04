@@ -50,12 +50,12 @@ function shuffle(array) {
 
 function renderCards() {
   let cardsURLArray = [
-    { imageURL:'https://i.redd.it/uku682j1g4y11.jpg' },
-    { imageURL: 'https://i.redd.it/s88hijpgc4r01.jpg' },
-    { imageURL: 'https://i.imgur.com/JpUnMZJ.jpg' },
-    { imageURL: 'https://i.imgur.com/mk12hAk.jpg' },
-    { imageURL: 'https://i.redd.it/ig5u8ke5qo421.png' },
-    { imageURL: 'https://i.redd.it/4lhmxjtj6yp01.jpg' },
+    { imageURL:'https://slappedham.com/wp-content/uploads/2016/12/Success-Kid-Meme.jpg' },
+    { imageURL: 'http://thinkingmeme.com/wp-content/uploads/2017/08/you-can-do-it-meme5.jpg' },
+    { imageURL: 'http://i.imgur.com/g8BSO8Z.jpg' },
+    { imageURL: 'https://i.pinimg.com/originals/9b/45/3e/9b453e52433d7ad3f5417b59dae8c286.jpg' },
+    { imageURL: 'https://cdn.someecards.com/posts/funny-memes-90s-haircuts-640x571-hpby7v.png' },
+    { imageURL: 'https://i.kym-cdn.com/entries/icons/original/000/001/945/haters.jpg' },
   ];
 
   const cardsURLArrayCopy = cardsURLArray.slice();

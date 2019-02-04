@@ -33,15 +33,28 @@ button:hover {
   z-index: 2;
 }
 
-.landing-modal p {
+.landing-modal p,
+.landing-modal a {
   font-size: 30px;
   color: white;
+}
+
+.intro ul {
+  text-decoration: underline;
+}
+
+.definition {
+  font-size: 14px;
 }
 
 .landing-modal button {
   font-size: 20px;
   padding: 7px;
-  border-radius: 8px;
+  border-radius: 200px;
+}
+
+.landing-modal button:hover {
+  transform: scale(1.05);
 }
 
 .landing-game-title {
