@@ -192,7 +192,7 @@ button:hover {
 }
 
 .card-container {
-  height: 1000px;
+  height: 90vh;
   width: 1900px;
   display: flex;
   flex-wrap: wrap;
