@@ -1,3 +1,6 @@
+* {
+
+}
 body {
   background-color: black;
   font-family: 'Raleway', sans-serif;
@@ -58,12 +61,12 @@ button:hover {
 .landing-modal button {
   font-size: 20px;
   padding: 7px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
-.landing-modal button:hover {
+/* .landing-modal button:hover {
   transform: scale(1.05);
-}
+} */
 
 .landing-game-title {
   font-size: 80px;
@@ -108,11 +111,11 @@ button:hover {
   margin-top: 40px;
 }
 
-.social-links p,
+/* .social-links p,
 .intro p {
   box-shadow: 0 0 77px 49px rgba(255,231,255,0.25);
   background: rgba(255,231,255,0.24);
-}
+} */
 
 .game-container {
   width: 1400px;
@@ -122,19 +125,21 @@ button:hover {
 }
 
 .scoreboard-info {
+  display: block;
+  background: white;
   margin-bottom: 375px;
   padding: 7px 17px;
   font-size: 22px;
-  border-radius: 7px;
-  background: white;
-  display: block;
-  text-align: left;
+  border: 2px solid #ff3850;
+  border-radius: 4px;
 }
 
 .time,
 .moves {
+  color: #ff3850;
+  font-weight: bold;
   display: inline-block;
-  padding: 9px;
+  padding: 4px;
   border-radius: 6px;
 }
 
@@ -151,7 +156,10 @@ button:hover {
 }
 
 .social-links p {
-  font-size: 30px;
+  font-size: 21px;
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 7px;
 }
 
 .buttons-container h1 {
@@ -164,7 +172,7 @@ button:hover {
   display: block;
   padding: 9px;
   font-size: 22px;
-  border-radius: 6px;
+  border-radius: 2px;
   outline: none;
 }
 
@@ -178,10 +186,9 @@ button:hover {
 }
 
 .new-game-button:hover {
-  border: 2px;
+  border: 1px solid #ff3850;
   background: #ff3850;
   color: white;
-  transform: scale(0.9);
 }
 
 .game-container button:active {
@@ -218,7 +225,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 18px;
-  border-radius: 6px;
+  border-radius: 2px;
   background-color: white;
 }
 
