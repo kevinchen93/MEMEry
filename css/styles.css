@@ -143,14 +143,22 @@ button:hover {
   border-radius: 6px;
 }
 
-.buttons-container {
+.buttons-container,
+.content-container {
   width: 400px;
   text-align: -webkit-center;
   margin-left: 45px;
   margin-right: 45px;
 }
 
-.buttons-container p {
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons-container p,
+.content-container p {
   font-weight: 600;
   color: #ff3850;
 }
