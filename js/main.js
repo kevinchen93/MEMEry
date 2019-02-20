@@ -230,7 +230,7 @@ $('.landing-modal-button').click(function() {
   $('.landing-modal').hide();
   $('.main-content').show();
   audio.src = 'assets/sounds/Nujabes - Luv(sic) Pt. 3 (ft. Shing02).mp3';
-  audio.volume = 0.7;
+  audio.volume = 0.3;
   audio.play();
   resetTime();
 });

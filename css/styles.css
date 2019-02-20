@@ -29,8 +29,16 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  background: black;
   z-index: 2;
+
+  background-color:black;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .landing-modal p,
@@ -50,7 +58,7 @@ button:hover {
 .landing-modal button {
   font-size: 20px;
   padding: 7px;
-  border-radius: 200px;
+  border-radius: 5px;
 }
 
 .landing-modal button:hover {
@@ -88,6 +96,16 @@ button:hover {
 
 .intro {
   margin-bottom: 77px;
+}
+
+.intro p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.intro .definition {
+  font-size: 20px;
+  margin-top: 40px;
 }
 
 .social-links p,
@@ -179,6 +197,7 @@ button:hover {
 .links-container button:hover,
 .modal-button:hover {
   background: #ff3850;
+  border: 1px solid #ff3850;
   color: white;
   outline: none;
 }
@@ -187,6 +206,7 @@ button:hover {
 .game-container button:active,
 .modal-content > button:active {
   background: #ff3850;
+  border: 1px solid #ff3850;
   color: white;
   outline: none;
 }
